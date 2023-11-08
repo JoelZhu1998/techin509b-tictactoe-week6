@@ -2,8 +2,13 @@
 # the Tic-Tac-Toe game. This is where input and output happens.
 # For core game logic, see logic.py.
 
-
+import logging
 from logic import make_empty_board, get_winner, other_player
+
+logging.basicConfig(
+    filename='logs/happyjoel_game_log.log',
+    level=logging.INFO
+)
 
 def print_board(board):
     for i in range(3):
@@ -36,8 +41,10 @@ def main():
     print_board(board)
     if winner:
         print(f"Player {winner} wins!")
+        logging.info('You win!')
     else:
         print("It's a draw!")
+        logging.info("It's a draw!")
 
 if __name__ == '__main__':
     main()
