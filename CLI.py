@@ -86,8 +86,3 @@ if __name__ == '__main__':
 
     game = TicTacToeGame(player1, player2)
     game.play_game()
-        print("It's a draw!")
-        logging.info("It's a draw!")
-
-if __name__ == '__main__':
-    main()
